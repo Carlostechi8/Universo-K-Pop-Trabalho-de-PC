@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huntrix Entertainment - Portal Oficial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4682B4; /* Cor de fundo suave */
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #4682B4; /* Roxo profundo, inspirado em K-pop */
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 2px;
+            font-size: 2.5em;
+        }
+
+        /* Seções */
+        section {
+            background-color: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            font-family: 'Oswald', sans-serif;
+            color: #6a1b9a;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        /* Seção Herói (Banner Inicial) */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1500x500/8e24aa/ffffff?text=HUNTRIX+WORLD') no-repeat center center/cover; /* Placeholder para imagem de fundo */
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            border-radius: 0;
+            box-shadow: none;
+            margin: 0;
+        }
+
+        .hero-section h2 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero-section p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Formulário de Inscrição */
+        .registration-form form {
+            display: grid;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .registration-form label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        .registration-form input[type="text"],
+        .registration-form input[type="email"],
+        .registration-form input[type="tel"],
+        .registration-form textarea,
+        .registration-form input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box; /* Garante que padding não aumente a largura total */
+        }
+
+        .registration-form textarea {
+            resize: vertical; /* Permite redimensionar verticalmente */
+            min-height: 100px;
+        }
+
+        .registration-form button {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .registration-form button:hover {
+            background-color: #4a148c; /* Roxo mais escuro no hover */
+        }
+
+        /* Seção de Fãs */
+        .fans-section {
+            text-align: center;
+        }
+
+        .fans-section .likes-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .fans-section .like-button {
+            background-color: #ff4081; /* Rosa vibrante, comum em K-pop */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px; /* Botão arredondado */
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .fans-section .like-button:hover {
+            background-color: #f50057;
+            transform: translateY(-3px);
+        }
+
+        .fans-section .like-button span {
+            font-size: 1.5em; /* Ícone de coração */
+        }
+
+        .fans-section #like-count {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #6a1b9a;
+            margin-top: 15px;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #333;
+            color: white;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HUNTRIX ENTERTAINMENT</h1>
+            <p>Seu Portal para o Universo K-Pop</p>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="container">
+            <h2>Bem-vindo à Família</h2>
+            <p>Descubra as últimas notícias, audições e junte-se à nossa comunidade de fãs apaixonados.</p>
+            <p>Abrace a paixão, a música e o talento. Seu futuro K-Pop começa aqui!</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="registration-form" id="audicoes">
+            <h2>Inscrições para Atores e Modelos e muito mais</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Envie seu portfólio e comece sua jornada para se tornar a próxima estrela da Huntrix Entertainment!</p>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <label for="name">Nome Completo:</label>
+                <input type="text" id="name" name="name" required placeholder="Seu nome">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+
+                <label for="phone">Telefone (opcional):</label>
+                <input type="tel" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX">
+
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age" min="16" max="30" required placeholder="Sua idade">
+
+                <label for="category">Categoria (Ator/Atriz, Modelo):</label>
+                <input type="text" id="category" name="category" required placeholder="Ex: Atriz, Modelo Fashion, Cantor, etc">
+
+                <label for="portfolio">Link do Portfólio Online (YouTube, Instagram, Website):</label>
+                <input type="text" id="portfolio" name="portfolio" placeholder="https://seulink.com">
+
+                <label for="bio">Pequena Biografia (Destaque talentos e experiências):</label>
+                <textarea id="bio" name="bio" rows="5" placeholder="Conte-nos sobre você, seus talentos e experiências relevantes."></textarea>
+
+                <label for="photo">Enviar Foto Recente (até 5MB):</label>
+                <input type="file" id="photo" name="photo" accept="image/*">
+
+                <button type="submit">Enviar Inscrição</button>
+            </form>
+            <p style="font-size: 0.9em; text-align: center; margin-top: 20px; color: #777;">
+                *Observação: Este é um formulário de demonstração. Para um sistema funcional, seria necessário um backend para processar e armazenar os dados.
+            </p>
+        </section>
+
+        <section class="fans-section" id="fas">
+            <h2>Mostre seu Amor à Huntrix!</h2>
+            <p>Clique no coração para deixar seu "like" e mostrar seu apoio à Huntrix e à nossa comunidade de fãs!</p>
+            <div class="likes-container">
+                <button class="like-button" id="likeBtn">
+                    <span>❤️</span> Deixe seu Like!
+                </button>
+                <p id="like-count">0 Likes</p>
+            </div>
+            <p style="font-size: 0.9em; margin-top: 20px; color: #777;">
+                *Observação: A contagem de likes nesta página é apenas para demonstração e será resetada ao recarregar a página. Para uma contagem persistente, seria necessário um backend.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Huntrix Entertainment. Todos os direitos reservados. | Feito com paixão K-Pop.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidade de "Likes" (apenas demonstração)
+        const likeBtn = document.getElementById('likeBtn');
+        const likeCountDisplay = document.getElementById('like-count');
+        let likes = 0;
+
+        // Tenta carregar likes do localStorage (para persistir entre recargas *no navegador local*)
+        if (localStorage.getItem('huntrixLikes')) {
+            likes = parseInt(localStorage.getItem('huntrixLikes'));
+        }
+        likeCountDisplay.textContent = `${likes} Likes`;
+
+        likeBtn.addEventListener('click', () => {
+            likes++;
+            likeCountDisplay.textContent = `${likes} Likes`;
+            localStorage.setItem('huntrixLikes', likes); // Salva no localStorage
+            alert('Obrigado pelo seu Like! ❤️');
+        });
+    </script>
+</body>
+</html>
